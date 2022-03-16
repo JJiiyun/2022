@@ -13,6 +13,8 @@ public class Ex_4 {
 		b = in.nextInt();
 		c = in.nextInt();
 		
+		in.close();
+		
 		if (a > b && a > c) {
 			max = a;
 		} else if (b > a && b > c) {
