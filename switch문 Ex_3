@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.print("당신의 주민등록번호를 입력하세요.(ex.010607-4000000)>");
+        
+        Scanner scanner = new Scanner(System.in);
+        String num = scanner.nextLine();
+        
+        char gender = num.charAt(7);
+        
+        switch(gender) {
+        	case '2': case '4': // char는 ''안에 써야되는구나 그래야 유니코드로 변환이 되니까. String은 ""해야되나?근데
+        		System.out.println("당신은 여자입니다.");
+        		break;
+        	case '1': case '3':
+        		System.out.println("당신은 남자입니다.");
+        		break;
+        	default:
+        		System.out.println("유효하지 않은 주민등록번호입니다.");
+        }
+        
+        } // main 메소드 끝
+        
+    } 
