@@ -1,0 +1,34 @@
+import java.util.*;
+
+public class Ex_3 {
+
+	public static void main(String[] args) {
+		int kor, eng, math, avg = 0; // 초기화
+		char grade = ' ';
+		
+		System.out.print("학점을 입력하세요 : ");
+		
+		Scanner in = new Scanner(System.in);
+		kor = in.nextInt();
+		eng = in.nextInt();
+		math = in.nextInt();
+		
+		avg = (kor+eng+math)/3;
+		
+		if (avg >= 90) {
+			grade = 'A';
+		} else if (avg >= 80) {
+			grade = 'B';
+		} else if (avg >= 70) {
+			grade = 'C';
+		} else if (avg >= 60) {
+			grade = 'D';					
+		} else {
+			grade = 'F';
+		}
+		
+		System.out.println(grade);
+
+	}
+
+}
