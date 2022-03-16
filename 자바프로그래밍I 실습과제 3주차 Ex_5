@@ -13,6 +13,8 @@ public class Ex_5 {
 		b = in.nextInt();
 		c = in.nextInt();
 		
+		in.close();
+		
 		avg = (a+b+c)/3;
 		
 		switch(avg/10) {
