@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("숫자입력 : ");		
+		int n = sc.nextInt();
+		int[][] array = new int[n][n];
+		int cnt = 1; // 1부터 시작
+		
+		for (int i=0; i<array.length; i++) 
+			for (int j=0; j<array[i].length; j++) 
+				array[i][j] = cnt++; // (0,0)에 1을 넣고 (0,1)에 2를 넣게됨
+				
+		for(int[] num : array) {
+			for(int i : num) {
+				System.out.printf("%-3d", i);
+			}
+			System.out.println();
+		}
+		
+	}
+}
