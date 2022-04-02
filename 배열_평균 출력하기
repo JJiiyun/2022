@@ -28,7 +28,8 @@ public class Ex5_9 {
 		String subPrint = "";
 		
 		for(int i=0; i<score.length; i++) {
-			subPrint = ""; // subPrint 초기화
+			subPrint = ""; // subPrint 초기화해서 다른 학생의 점수 출력
+		 	total = 0; // total 초기화해서 다른 학생의 점수에 적용
 			for(int j=0; j<score[i].length; j++) {
 				total += score[i][j]; // 한 학생의 국영수 총점 (0,0)+(0,1)+(0,2)
 				subPrint += score[i][j] + " "; //출력하기 위해 만든 String 변수. (0,0)+(0,1)+(0,2) 숫자를 출력
