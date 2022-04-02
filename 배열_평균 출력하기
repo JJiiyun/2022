@@ -1,0 +1,53 @@
+
+public class Ex5_9 {
+
+	public static void main(String[] args) {
+		int[][] score = {
+				{100, 100, 100}
+				,{20, 20, 20}
+				,{30, 30, 30}
+				,{40, 40, 40}
+				,{50, 50, 50}
+			};
+
+		int korTotal = 0, engTotal = 0, mathTotal = 0;
+		
+//for문으로 score[i][0]끼리만 더해주고, [i][1]끼리만, 이걸 [j]까지
+//	
+//		for(int i=0; i<score.length; i++) {
+//			for(int j=0; j<score[i].length; j++) {	
+//			}		
+//		korTotal += score[i][0];
+//		engTotal += score[i][1];
+//
+		
+		System.out.println("번호 국어 영어 수학 총점 평균");
+		System.out.println("==========================");
+		
+		int total = 0, avg = 0;
+		String subPrint = "";
+		
+		for(int i=0; i<score.length; i++) {
+			subPrint = ""; // subPrint 초기화
+			for(int j=0; j<score[i].length; j++) {
+				total += score[i][j]; // 한 학생의 국영수 총점 (0,0)+(0,1)+(0,2)
+				subPrint += score[i][j] + " "; //출력하기 위해 만든 String 변수. (0,0)+(0,1)+(0,2) 숫자를 출력
+				avg = total / score[i].length; // 한 학생의 국영수 평균
+				
+			}
+
+			System.out.printf("%-2d %s%d %d%n", i+1, subPrint, total, avg);
+
+			korTotal += score[i][0];
+			engTotal += score[i][1];
+			mathTotal += score[i][2];
+			
+
+		} // 바깥쪽 for문 종료
+		
+		System.out.println("==========================");
+		System.out.print("총점: " + korTotal + "  " + engTotal + "  " + mathTotal + "  ");
+		
+	}
+
+}
